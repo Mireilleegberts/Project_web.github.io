@@ -1,0 +1,505 @@
+/*Bronnen:
+Een van mijn bronnen is Karin Lui, mede student CMD
+https://css-tricks.com/snippets/css/using-font-face/
+https://codepen.io/joostf/pen/VKyPxk*/
+
+/*Inladen en instellen van fonts*/
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('RobotoCondensed-Light-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('Roboto-Thin-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'Roboto-Condensed';
+  src: url('RobotoCondensed-Regular-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('Roboto-Regular-webfont.woff') format('woff')
+}
+
+/*Inladen en instellen van fonts*/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto-Condensed', sans-serif;
+    background-color: dimgray;
+}
+
+#shadow {
+    transition background-color: 0.5s ease;
+    background-color: rgba(50, 50, 50, 0.7);
+    position: absolute;
+    font: 0/0 a;
+    margin-top: 3.9rem;
+    padding-bottom: 10rem;
+    width: 100%;
+    height: 100%;
+}
+
+/*Header met daarin balk, headerafbeelding, uitschuif filter, hamburger menu, slogen*/
+header {
+    background-color: rgb(115,215,0);
+    height: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > a {
+    background-image: url(Flixbus_logo_wit.png);
+    font: 0/0 a;
+    display: inline-block;
+    color: transparent;
+    background-size: 7.5rem;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 7.5rem;
+    height: 3rem;
+    margin-top: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+}
+
+header button:nth-of-type(1) {
+    background: url(Hamburger.svg);
+    position: relative;
+    font: 0/0 a;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    width: 1.4rem;
+    height: 1.5rem;
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+    order: 0;
+    border-style: none;
+    margin-left: 1rem;
+}
+
+header button:nth-of-type(2) {
+    background: url(Zoek_icon.svg);
+    font: 0/0 a;
+    background-repeat: no-repeat;
+    background-size: 1.3rem;
+    margin-top: 1rem;
+    width: 1.4rem;
+    height: 2rem;
+    order: 2;
+    border-style: none;
+    margin-right: 1rem;
+}
+
+header nav {
+    transform: translate(-105%);
+    transition: 0.5s;
+    position: absolute;
+    background-color: white;
+    top: 6.5rem;
+    height: 80%;
+    width: 16rem;
+}
+
+
+header ul {
+    margin: 0;
+    padding-left: 1rem;
+    list-style: none;
+    border-bottom: 0;
+    margin-top: 3rem;
+    list-style: none;  
+}
+
+header nav ul:nth-of-type(1) {
+    display: inline-block;
+    color: orange;
+}
+
+header nav li a {
+    display: block;
+    font-size: 1em;
+    font-family: 'Roboto-Condensed', sans-serif;
+    color: rgb(68,68,68);
+    border-style: none;
+    list-style: none;
+    margin-top: 1.6rem;
+}
+
+header nav img {
+    width: 3rem;
+    margin-top: 2rem;
+    margin-left: 1rem;    
+}
+
+header nav.show {
+    visibility: visible;
+    height: 100%;
+    padding-bottom: 20rem;
+    transition: 0.5s;
+    transform: translate(0);
+}
+
+/*Header filter uitschuif menu*/
+
+header form {
+    transform: translateY(-160%);
+    transition: 0.5s;
+    position: absolute;
+    background-color: #65BA04;
+    top: 3.8rem;
+    width: 100%;
+    margin: 0;
+    height: 15.7rem;
+}
+
+header form fieldset {
+    border-style: none;
+    text-align: center;
+    font-family: 'Roboto-Light', sans-serif;
+    color: white;
+    margin-top: 0.7rem;    
+}
+
+
+#search {
+    width: 60%;
+    font-family: 'Roboto-Light', sans-serif;
+    text-align: center;
+}
+
+#submit {
+    float: right;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: white;
+    margin-right: 1rem;
+    border-style: none;
+    background-color: orange;
+    border-radius: 1rem;
+    width: 5rem;
+}
+
+header form.showFilter {
+    transform: translate(0);   
+}
+
+
+div {
+    background-image: url(flixbus.png);
+    background-size: cover;
+    background-position: center;
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+    height: 18.3rem;
+    order: 3;
+}
+
+h1 {
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    background-color: rgb(68,68,68);
+    margin: 0;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+/*Header met daarin balk, headerafbeelding, uitschuif filter, hamburger menu, slogen*/
+/*Filter opties, meest gelezen, alle verhalen, geliked*/
+
+form button {
+    height: 2rem;
+    width: 8rem;
+    margin-top: 20rem;
+    margin-bottom: 1rem;
+    border: 1px solid darkgray;
+    border-radius: 0.3em;
+    color: darkgray; 
+    font-size: 0.9em;
+    font-family: 'Roboto-Light', sans-serif;
+}
+
+form button:nth-of-type(1) {
+    margin-left: 2%;
+    border:none;
+    background-color: rgb(115,215,0);
+    color: white;
+}
+
+form button:nth-of-type(2) {
+    width: 7rem;
+}
+
+form button:nth-of-type(3) {
+    width: 7rem;
+}
+/*Filter opties, meest gelezen, alle verhalen, geliked*/
+/*Main artikelen*/
+main{
+    margin-bottom: 2rem;
+}
+    
+main article:nth-of-type(1) {
+    background-image: url(Sonnet-background-small_Tekengebied%201_Tekengebied%201.png);
+    background-size: cover;
+}
+
+main article:nth-of-type(2) {
+    background-image: url(gebroken-small_Tekengebied%201.png);
+    background-size: cover;
+}
+
+main article:nth-of-type(3) {
+    background-image: url(Hongerwinter_Tekengebied%201.png);
+    background-size: cover;
+}
+
+main article:nth-of-type(4) {
+    background-image: url(513488200.jpg);
+    background-size: cover;
+}
+
+main article:nth-of-type(5) {
+    background-image: url(famous_Tekengebied%201.png);
+    background-size: cover;
+}
+
+main article:nth-of-type(6) {
+    background-image: url(Schermafbeelding%202017-11-08%20om%2013.26.02.png);
+    background-size: cover;
+}
+/*Main artikelen*/
+/*Extra styling artikelen, text, border, hover*/
+
+main article:hover {
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+main article p {
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 1em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+article img {
+    display: inline-block;
+    width: 50%;
+    height: 15rem;
+    float: right;
+    margin-right:-0.3em;
+    margin-top: -0.2em;
+    padding-left: 0.3rem;
+    border-radius: 0em 1em 1em 0em;
+    float: right;
+}
+
+h2 {
+    font-family: 'Roboto-Regular', sans-serif;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.1em #353535;
+    text-align: center;
+    font-size: 1.3em;
+    padding-left: 0.2em;
+}
+
+main article {
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    border-radius: 1em 1em 1em 0em;
+    margin: 2%;
+    padding: 1em;
+    grid-row: 2;  
+}
+
+main article a {
+    font-family: 'Roboto-Light', sans-serif;
+    text-align: center;
+    color: orange;
+    text-shadow: 0.05em 0.05em #353535;
+    text-decoration: none;
+    padding-left: 0.2em;
+    margin-left: 37%;
+}
+
+main p {
+    font-family: 'Roboto-Light', sans-serif;
+    color: white;
+    font-size: 0.9em;
+    text-shadow: 0.1em 0.1em 0.1em #353535;
+    padding-left: 0.2em;
+    text-align: center;
+}
+/*Extra styling artikelen, text, border, hover*/
+/*Grid*/
+
+@media (min-width: 25em) {
+    main{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    
+    form {
+        margin-left: 0.6rem
+    }
+}
+
+@media (min-width: 30em){
+    main{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    form {
+        margin-left: 3rem
+    }
+}
+
+@media (min-width: 40em){
+    main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 4%;
+    margin-right: 4%;  
+    }
+    
+    main article:nth-of-type(1){
+    grid-column: 1;
+    grid-row:1;
+    }
+    
+    main article:nth-of-type(2) {
+    grid-column: 2;
+    grid-row:1;
+    }
+    
+    main article:nth-of-type(3) {
+    grid-column: 1;
+    grid-row:2;
+    }
+    
+    main article:nth-of-type(4) {
+    grid-column: 2;
+    grid-row:2;
+    }
+    
+    main article:nth-of-type(5) {
+    grid-column: 1;
+    grid-row:3;
+    }
+    
+    main article:nth-of-type(6) {
+    grid-column: 2;
+    grid-row:3;
+    }
+    
+    main article:nth-of-type(7) {
+    grid-column: 1;
+    grid-row:4;
+    }
+    
+    main article:nth-of-type(8) {
+    grid-column: 2;
+    grid-row:4;
+    }
+    
+    form {
+        margin-left: 1rem
+    }
+}
+
+@media (min-width: 60em){
+    main{
+    display: grid;
+    grid-template-columns: 33% 33% 33%; 
+    
+    }
+    
+    main article:nth-of-type(1){
+    grid-column: 1;
+    grid-row:1;
+    }
+    
+    main article:nth-of-type(2) {
+    grid-column: 2;
+    grid-row:1;
+    }
+    
+    main article:nth-of-type(3) {
+    grid-column: 3;
+    grid-row:1;
+    }
+    
+    main article:nth-of-type(4) {
+    grid-column: 1;
+    grid-row:2;
+    }
+    
+    main article:nth-of-type(5) {
+    grid-column: 2;
+    grid-row:2;
+    }
+    
+    main article:nth-of-type(6) {
+    grid-column: 3;
+    grid-row:2;
+    }
+    
+    main article:nth-of-type(7) {
+    grid-column: 1;
+    grid-row:3;
+    }
+    
+    main article:nth-of-type(8) {
+    grid-column: 2;
+    grid-row:3;
+    }
+    
+    main article:nth-of-type(9) {
+    grid-column: 3;
+    grid-row:3;
+    }
+    
+    form {
+        margin-left: 1.8rem
+    }
+}
+/*Grid*/
+/*Footer*/
+footer {
+    background-color: rgba(50, 50, 50, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2em;
+}
+
+footer button {
+    float: right;
+    font-size: 0.7em;
+    color: slategrey;
+    font: 0/0 a;
+    background-image: url(lightswitch-off.svg);
+    background-size: cover;
+    background-color: rgb(115,215,0);
+    border-style: none;
+    width: 4.1rem;
+    height: 4.1rem;
+    margin-right: 0.4rem;
+    border-radius: 2rem;
+    display: block;
+    margin-top: -2.2rem;
+}
+/*Footer*/

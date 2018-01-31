@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/indexdark.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Flixbus verhalen website</title>
+</head>
+<body>
+  
+    <header>
+        <a href="index.html">Logo Flixbus</a>
+            <button>menu</button>
+            <button>zoek</button>
+<form action="gelezen.html">
+    <Fieldset>
+        <legend>Zoek uit de 99 verhalen:</legend>
+            <input id="search" type="search" name="search" placeholder="Voorbeeld: Zombie">
+    </Fieldset>
+    <Fieldset>
+        <legend>Filter op:</legend>
+            <select name="filter" id="filter">
+                <option value="Populair">Populair</option>
+                <option value="Meest gelezen">Meest gelezen</option>
+                <option value="Designer">Designer</option>
+            </select>
+    </Fieldset>
+    <Fieldset>
+        <legend>Sorteer op:</legend>
+            <select name="sorteer" id="sorteer">
+                <option value="Alfabetische volgorde">Alfabetische volgorde</option>
+                <option value="Random">Random</option>
+            </select>
+    </Fieldset>
+        <input id="submit" type="submit" value="Zoek">
+</form>
+<nav>
+    <ul>
+        <li><a href="login.html">Log in ></a></li>
+    </ul>
+<hr>
+    <ul>
+        <li><a href="index.html">Instellingen       ></a></li>
+        <li><a href="index.html">Over deze Website       ></a></li>
+        <li><a href="index.html">Naar de Flixbus boeking site       ></a></li> 
+        <li><a href="index.html">Language       ></a></li> 
+    </ul>
+</nav>
+<div>
+    <h1>Overal en onderweg de leukste verhalen lezen!</h1>
+</div>
+</header>
+     
+<form method="get" action="gelezen.html">
+    <button type="submit">Alle verhalen (79)</button>
+    <button type="submit">Gelezen (20)</button>
+    <button type="submit">Geliked (7)</button>
+</form>
+    
+<main>
+    <article>
+        <h2>Sonnet</h2>
+        <p>Bus 21, 12 uur, begin van de week Mijn zoon slaapt in zijn wagentje, en zo Ga ik op zoek naar Stijloefeningen van Queneau...</p>
+        <a href="sonnet.html">Lees verder>></a>
+    </article>
+    <article>
+        <h2>Ongeluk</h2>
+        <p>Voor het Centraal Station stap ik lijn 13 uit midden in een plas die zo diep is dat mijn hele schoen erin verdwijnt. Mijn zoontje...</p>
+        <a href="ongeluk.html">Lees verder>></a>
+    </article>
+    <article>
+        <h2>Hongerwinter</h2>
+        <p>Mijn voeten en handen heb ik ingezwachteld tegen de kou. Kranten tegen m’n borst. Ik duw een handkar voort waarin mijn zoon vredig....</p>
+        <a href="leegte.html">Lees verder>></a>
+    </article>
+    <article>
+        <h2>Van vader tot zoon</h2>
+        <p>Je ligt vredig in je wagen te slapen als ik de bus uitstap op die druilerige dag in februari van het jaar 2011. In je...</p>
+        <a href="sonnet.html">Lees verder>></a>
+    </article>
+    <article>
+        <h2>Beroemd</h2>
+        <p>Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn diensten. Hij zwaait joviaal terug...</p>
+        <a href="sonnet.html">Lees verder>></a>
+    </article>
+    <article>
+        <h2>Code</h2>
+        <p>Kraak de code en win een romantisch etentje met de verwarde man. In kwellende situaties toveren apen pennenvruchten...</p>
+        <a href="sonnet.html">Lees verder>></a>
+    </article>
+</main>
+<footer>
+    <form method="get" action="index.html">
+        <button type="submit">Brightmodus-off</button>
+    </form>
+</footer>
+    <script src="js/flixbus.js"></script>
+</body>
+</html>

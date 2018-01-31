@@ -1,0 +1,213 @@
+/*Bronnen:
+Een van mijn bronnen is Karin Lui, mede student CMD
+https://css-tricks.com/snippets/css/using-font-face/
+https://codepen.io/joostf/pen/VKyPxk*/
+
+/*Inladen en instellen van fonts*/
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('RobotoCondensed-Light-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('Roboto-Thin-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'Roboto-Condensed';
+  src: url('RobotoCondensed-Regular-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('Roboto-Regular-webfont.woff') format('woff')
+}
+/*Inladen en instellen van fonts*/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto-Condensed', sans-serif; 
+}
+/*Header met daarin logo*/
+header {
+    background-color: rgb(115,215,0);
+    height: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > a {
+    background-image: url(Flixbus_logo_wit.png);
+    font: 0/0 a;
+    display: inline-block;
+    color: transparent;
+    background-size: 7.5rem;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 7.5rem;
+    height: 3rem;
+    margin-top: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+}
+/*Header met daarin logo*/
+/*Algemene slyling*/
+h1 {
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 1em;
+    color: rgb(68,68,68);
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+h2 {
+    font-family: 'Roboto-Condensed', sans-serif;
+    font-size: 1em;
+    color: darkorange;
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+/*Algemene slyling*/
+/*formulier*/
+form {
+    text-align: center;
+    margin: auto;
+    width: 90%;  
+}
+
+fieldset {
+    border-style: none;   
+}
+
+
+legend {
+    color:orange;
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+
+placeholder {
+    text-align: center;
+}
+
+#email {
+    display: block;
+    text-align: center;
+    border-radius: 0.6em;
+    border-bottom-style: none;
+    box-shadow: none;
+    margin-top: 0.7rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid gray 0.1em;
+    height: 3em;
+    padding-left: 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    font-size: 1em; 
+}
+
+#password {
+    display: block;
+    text-align: center;
+    border-radius: 0.6em;
+    border-bottom-style: none;
+    box-shadow: none;
+    margin-bottom: 2rem;
+    margin-top: 0.7rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid gray 0.1em;
+    height: 3em;
+    padding-left: 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    font-size: 1em; 
+}
+
+#name {
+    display: block;
+    text-align: center;
+    border-radius: 0.6em;
+    border-bottom-style: none;
+    box-shadow: none;
+    margin-bottom: 2rem;
+    margin-top: 0.7rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid gray 0.1em;
+    height: 3em;
+    padding-left: 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    font-size: 1em; 
+}
+
+
+#button {
+    margin-bottom: 2rem;
+    border-bottom-style: none;
+}
+
+main form input:valid {
+    border: 0.15em solid rgb(115,215,0);
+    color: black;
+}
+
+main form fieldset:valid #button {
+    box-sizing: border-box;
+    box-shadow: 0 0.2em 0.2em;
+    margin: 1em;
+    background-color: darkorange;
+    width: 10em;
+    height: 2.8em;
+    border: none;
+    border-radius: 0.3em;
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    transition: .5s;
+    transform: scale(1);
+    padding:0;
+    background-image: none;
+}
+
+#back {
+    background-color: rgb(115,215,0);
+    border: none;
+    border-radius: 0.3em;
+    color: white;
+    font-size: 0.8em;
+    padding: 0.5rem;
+}
+
+main form fieldset:invalid #button {
+    display: hidden;
+    background-image: none;
+    color: transparent;
+    margin-top: -2em;
+    border-bottom-style: none;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+/*formulier*/
+/*footer*/
+
+footer {
+    bottom: 0;
+}
+/*footer*/

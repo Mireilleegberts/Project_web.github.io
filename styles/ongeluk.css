@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;  
+}
+
+/* header */
+
+header {
+    background-color: rgb(115,215,0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header div {
+    background-image: url('flixbus.png');
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-size: cover;
+    background-position: center;
+    padding: 5em 0;
+    width: 100%;
+    order: 4;
+}
+
+/*Terug button*/
+header button:nth-of-type(1) {
+    background: url(pijl-links2.svg);
+    position: relative;
+    font: 0/0 a;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.3rem;
+    order: 1;
+    border-style: none;
+    margin-left: 0.7rem;
+}
+/*Terug button*/
+
+/*Download button*/
+
+header button:nth-of-type(2) {
+    background: url(downloaden.svg);
+    position: relative;
+    font: 0/0 a;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    order: 2;
+    float: right;
+    border-style: none;
+}
+/*Download button*/
+
+/*like button*/
+
+header button:nth-of-type(3) {
+    background: url(heart-normal.svg);
+    position: relative;
+    font: 0/0 a;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.3rem;
+    order: 3;
+    border-style: none;
+    margin-right: 0.7rem;
+    
+}
+
+/*like button*/
+
+header h1{
+    font-family: "roboto", "arial", sans-serif;
+    font-size: 1em;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.7);
+    display: inline-block;
+    padding: 0.5em 0.5em;
+    border-radius: 0 1em 1em 0;
+    margin-top: 1em;    
+}
+
+/*article*/
+
+article img{
+    width: 100%;
+    margin-top: 1.6em
+}
+
+
+article h1{
+    position: absolute;
+    margin-top: 0;
+    width: 100%;
+    height: 1.7em;
+    font-family: "roboto", "arial", sans-serif;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 0.4em;
+    color: white;
+    background-color: black;
+    
+
+}
+
+/*article*/
+
+/*Reactie button*/
+
+#reaction button {
+    position: fixed;
+    background-image: url(pijl-rechts.svg);
+    background-size: cover;
+    top: 0;
+    padding: 0.5rem;
+    margin-top: 22rem;
+    margin-left: -1.3rem;
+    font: 0/0 a;
+    border-style: none;
+    background-color:  rgb(115,215,0); 
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+}
+/*Reactie button*/
+
+/* footer */
+
+footer {
+    background-color: rgba(50, 50, 50, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2em;
+}
+
+footer button {
+    float: right;
+    background-image: url(light.svg);
+    background-size: cover;
+    background-color: rgb(115,215,0);
+    border-style: none;
+    font: 0/0 a;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.4rem;
+    border-radius: 2rem;
+    display: block;
+    margin-top: -2.2rem;
+    
+}
+/* footer */
+
+/*Responsive*/
+
+
+@media (min-width: 30em){
+    article img:nth-of-type(1){
+        display: none;
+    }
+}
+
+@media (min-width: 60em){
+    article img:nth-of-type(2){
+        display: none;
+    }
+    
+
+/*Responsive*/
+
+
+
+
